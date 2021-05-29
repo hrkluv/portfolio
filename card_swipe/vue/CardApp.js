@@ -267,7 +267,7 @@ export const cardApp = Vue.extend({
       const isLoad = (lifecycle == "created")
       const list = this.cardData ? this.cardData : []
       //const res = await axios.get(`/api/interested/from?page=${this.getPage}`)
-      const res = [
+      const resultBody = [
         {
           image_url: "../img/photo_01.jpg",
           age: 26,
@@ -275,7 +275,6 @@ export const cardApp = Vue.extend({
           job: "事務職/OL"
         }
       ]
-      const resultBody = res.data.result_body
       const length = resultBody.length
 
       if (isLoad) {
