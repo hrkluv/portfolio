@@ -1,6 +1,6 @@
 'use strict';
 import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js'
-import {cardApp} from 'CardApp.js'
+import {cardApp} from './CardApp.js'
 //import matchApp from '/jvs/vue/pages/type/MatchApp.js'
 //import needPayment from '/jvs/vue/pages/type/NeedPayment.js'
 
