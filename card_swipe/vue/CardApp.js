@@ -178,7 +178,7 @@ const cardModule = Vue.extend({
   },
   template: `
     <a href="#" class="card_item" :class="cardClass" :style="getTranslatePositionStyle">
-      <div class="card_item_photo" :class="setFirstCoverClass">
+      <div class="card_item_photo">
           <div class="photo" :style="{backgroundImage: 'url(' + card.image_url + ')'}"></div>
       </div>
       <dl class="card_item_status">
@@ -269,7 +269,8 @@ export const cardApp = Vue.extend({
       //const res = await axios.get(`/api/interested/from?page=${this.getPage}`)
       const resultBody = [
         {
-          image_url: "../img/photo_01.jpg",
+          id:1,
+          image_url: "./img/photo_01.jpg",
           age: 26,
           tdfk: "東京都",
           job: "事務職/OL"
