@@ -42,7 +42,7 @@ new Vue({
   methods: {
     setIndicatedArea() {
       const maxArea = 588 //上部余白16px分込み
-      const winH = getWindowHeightFunc()
+      const winH = window.innerHeight
       const header = document.querySelector(".type-cardui_header")
       const headerH = header ? header.getBoundingClientRect().height : 0
       const bottomnav = document.querySelector("#bottom_navigation")

@@ -386,7 +386,6 @@ export const cardApp = Vue.extend({
         @set-processing="setProcessing"
         @clear-processing="clearProcessing"
         @on-action="onAction"
-        @confirm-card-open="confirmCardOpen"
       ></card-module>
       </div>
       <div class="btn_wrap" :style="indicate.btn" v-if="showBtn">
@@ -401,9 +400,6 @@ export const cardApp = Vue.extend({
           @on-swipe="onSwipe"
         ></btn-type-module>
       </div>
-      <confirm-card-open
-        ref="confirmCardOpen"
-      ></confirm-card-open>
     </div>
   `
 })
