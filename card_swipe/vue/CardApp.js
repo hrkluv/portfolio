@@ -10,13 +10,11 @@ const cardModule = Vue.extend({
   },
   data(){
     return {
-      firstCover: false,
       state: '',
       deltaX: '',
       deltaY: '',
       rotate: '',
-      moving: false,
-      isOpened: Boolean(parseInt(this.card.is_opened,10)),
+      moving: false
     }
   },
   computed: {
@@ -25,14 +23,7 @@ const cardModule = Vue.extend({
         transform: `translate3d(${this.deltaX}px, ${this.deltaY}px, 0px) rotate(${this.rotate}deg)`
       }
     },
-    setFirstCoverClass() {
-      return {
-        cover: !this.isOpened && this.firstCover
-      }
-    },
-    isOnline() {
-      return Boolean(this.card.online_flg)
-    },
+    /*
     hasAffinity() {
       return this.card.affinity.count > 0
     },
@@ -41,6 +32,7 @@ const cardModule = Vue.extend({
       const text = count > 99 ? '99+' : `${this.card.affinity.count}個`
       return text
     },
+    */
     cardClass() {
       return {
         moving: this.moving,
@@ -97,6 +89,7 @@ const cardModule = Vue.extend({
 
           const type = (this.state === 1)
 
+          /*
           if (type) {
             if (this.isOpened) {
               this.$emit('on-action',this.state)
@@ -110,6 +103,8 @@ const cardModule = Vue.extend({
           } else {
             this.$emit('on-action',this.state)
           }
+          */
+          this.$emit('on-action',this.state)
         }
       })
     },
@@ -119,6 +114,7 @@ const cardModule = Vue.extend({
       this.deltaY = 0
       this.rotate = 0
       if (type) {
+        /*
         if (this.isOpened) {
           this.deltaX = moveOutWidth
           this.$emit('on-action',state)
@@ -126,6 +122,9 @@ const cardModule = Vue.extend({
           this.$emit('confirm-card-open')
           this.$emit('clear-processing')
         }
+        */
+        this.deltaX = moveOutWidth
+        this.$emit('on-action',state)
       } else {
         this.deltaX = `-${moveOutWidth}`
         this.$emit('on-action',state)
@@ -155,6 +154,7 @@ const cardModule = Vue.extend({
       const res = await axios.get(`/api/interested/open?interested_id=${id}`)
       return res.data
     },
+    /*
     async openProfile() {
       if (this.isOpened) {
         const res = await this.interestedOpenApi(this.card.interested_id)
@@ -174,22 +174,16 @@ const cardModule = Vue.extend({
         this.$emit('confirm-card-open')
       }
     }
+    */
   },
   template: `
-    <a href="#" class="card_item" :class="cardClass" :style="getTranslatePositionStyle" @click.prevent="openProfile">
+    <a href="#" class="card_item" :class="cardClass" :style="getTranslatePositionStyle">
       <div class="card_item_photo" :class="setFirstCoverClass">
           <div class="photo" :style="{backgroundImage: 'url(' + card.image_url + ')'}"></div>
-          <div class="first_cover" v-if="!isOpened">
-            <dl>
-              <dt>タップして写真を見る</dt>
-              <dd>30pt消費します</dd>
-            </dl>
-          </div>
       </div>
       <dl class="card_item_status">
-        <dt>{{card.age}}歳 {{card.tdfk}}<span class="online" v-if="isOnline"></span></dt>
+        <dt>{{card.age}}歳 {{card.tdfk}}</dt>
         <dd class="job">{{card.job}}</dd>
-        <dd class="affinity" v-if="hasAffinity"><span class="count">共通点 {{affinityCount}}</span></dd>
       </dl>
     </a>
   `
@@ -272,7 +266,15 @@ export const cardApp = Vue.extend({
     async getCardApi(lifecycle) {
       const isLoad = (lifecycle == "created")
       const list = this.cardData ? this.cardData : []
-      const res = await axios.get(`/api/interested/from?page=${this.getPage}`)
+      //const res = await axios.get(`/api/interested/from?page=${this.getPage}`)
+      const res = [
+        {
+          image_url: "../img/photo_01.jpg",
+          age: 26,
+          tdfk: "東京都",
+          job: "事務職/OL"
+        }
+      ]
       const resultBody = res.data.result_body
       const length = resultBody.length
 
