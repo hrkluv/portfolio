@@ -8,12 +8,12 @@
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
-<body>
+<body class="card_swipe">
   <header>
     <h1>card_swipe</h1>
   </header>
 
-  <div id="typeCardUiApp" class="type-cardui_app_container type-from_wrapper" :class="setIndicateClass" :style="indicate.container" v-cloak>
+  <div id="typeCardUiApp" class="card_swipe_app_container" :class="setIndicateClass" :style="indicate.container" v-cloak>
     <transition name="empty_state" mode="out-in" appear>
     <card-app
       v-if="hasCard"
