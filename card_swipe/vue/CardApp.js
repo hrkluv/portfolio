@@ -371,7 +371,7 @@ export const cardApp = Vue.extend({
     cardModule,
     btnTypeModule,
     btnSkipModule,
-    confirmCardOpen
+    //confirmCardOpen
   },
   template: `
     <div class="card_app_template">
