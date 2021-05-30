@@ -60,6 +60,7 @@ new Vue({
       }
       this.$set(this.indicate.body, 'height', `${winH}px`)
     },
+    /*
     onMatch(data) {
       const matchApp = this.$refs.matchApp
       matchApp.setMatchData(data)
@@ -68,6 +69,7 @@ new Vue({
       const needPaymentPopup = this.$refs.needPayment
       needPaymentPopup.onChangeState(state)
     },
+    */
     emptyState() {
       this.hasCard = false
     }

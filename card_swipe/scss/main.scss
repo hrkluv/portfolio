@@ -182,11 +182,11 @@ body.card_swipe {
       box-shadow: 0px 16px 28px rgba(0, 0, 0, 0.08);
       &.type {
         background-color: #ff6f6f;
-        background-image: url(/img/type/btn_icon_heart.png);
+        background-image: url(../img/heart.png);
       }
       &.skip {
         background-color: #cdcdd0;
-        background-image: url(/img/type/btn_icon_skip.png);
+        background-image: url(../img/skip.png);
       }
     }
   }

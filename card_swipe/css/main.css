@@ -228,12 +228,12 @@ body.card_swipe .pointer_events_none {
 
 .card_swipe_app_container .btn_wrap .btn.type {
   background-color: #ff6f6f;
-  background-image: url(/img/type/btn_icon_heart.png);
+  background-image: url(../img/heart.png);
 }
 
 .card_swipe_app_container .btn_wrap .btn.skip {
   background-color: #cdcdd0;
-  background-image: url(/img/type/btn_icon_skip.png);
+  background-image: url(../img/skip.png);
 }
 
 .card_swipe_app_container .card_app_empty {
