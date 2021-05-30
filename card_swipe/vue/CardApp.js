@@ -302,6 +302,7 @@ export const cardApp = Vue.extend({
       if (length > 0) this.cardData = [...resultBody.reverse(), ...list.reverse()]
       
     },
+    /*
     async getEpochToken(id) {
       try {
         const res = await axios.get(`/interested/get_epoch_ttoken_json?target_member_id=${id}`)
@@ -311,9 +312,6 @@ export const cardApp = Vue.extend({
       } catch(e) {
         return
       }   
-    },
-    onSwipe(state) {
-      this.currentRef.onSwipe(state)
     },
     async judge(state) {
       await this.getEpochToken(this.currentCardId)
@@ -330,6 +328,10 @@ export const cardApp = Vue.extend({
       } else {
         throw judge.data
       }
+    },
+    */
+    onSwipe(state) {
+      this.currentRef.onSwipe(state)
     },
     async transitionEnd() {
       return new Promise((resolve) => {
