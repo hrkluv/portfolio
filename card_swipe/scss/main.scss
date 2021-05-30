@@ -1,5 +1,9 @@
 @import "../../scss/function";
 
+[v-cloak] {
+  display: none;
+}
+
 header {
   display: grid;
   place-items: center;
