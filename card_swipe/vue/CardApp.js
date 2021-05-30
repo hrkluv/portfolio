@@ -41,9 +41,11 @@ const cardModule = Vue.extend({
     }
   },
   methods: {
+    /*
     setFirstCover() {
       if (!this.isOpened) this.firstCover = true
     },
+    */
     initSwipe() {
       this.deltaX = 0
       this.deltaY = 0
@@ -227,13 +229,13 @@ export const cardApp = Vue.extend({
   data () {
     return {
       showBtn: false,
-      firstCover: false,
+      //firstCover: false,
       lastIdx: '',
       getPage: 1,
       cardData: [],
       currentRef: '',
       currentCardId: '',
-      judgeData: {},
+      //judgeData: {},
       processing: false
     }
   },
@@ -243,7 +245,6 @@ export const cardApp = Vue.extend({
   watch: {
     cardData(newVal,oldVal) {
       const length = this.cardData.length
-      if (length) {
         const lastIdx = length - 1
         this.lastIdx = lastIdx
         const currentCard = this.cardData[lastIdx]
@@ -251,15 +252,16 @@ export const cardApp = Vue.extend({
         this.$nextTick(function(){
           this.currentRef = this.$refs[this.currentCardId][0]
           this.currentRef.setSwipe()
+          /*
           if (!this.firstCover) {
             setTimeout(() => {
               this.currentRef.setFirstCover()
             },1000)
             this.firstCover = true
           }
+          */
           
         })
-      }
     },
   },
   methods: {
@@ -343,6 +345,9 @@ export const cardApp = Vue.extend({
     async processAll(state) {
       await this.transitionEnd()
       this.$delete(this.cardData, this.lastIdx)
+      if ( this.cardData.length === 1 ) {
+        this.getCardApi()
+      }
       if (this.cardData.length < 1) {
         this.$emit('empty-state')
       }
