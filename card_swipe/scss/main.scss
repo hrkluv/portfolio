@@ -234,6 +234,7 @@ body.card_swipe {
   position: relative;
   @include card_wrap;
   @include btn_wrap;
+  @include empty_state;
   .empty_state-enter-active, .empty_state-leave-active {
     transition: opacity .3s ease;
   }

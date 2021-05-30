@@ -236,6 +236,50 @@ body.card_swipe .pointer_events_none {
   background-image: url(/img/type/btn_icon_skip.png);
 }
 
+.card_swipe_app_container .card_app_empty {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.card_swipe_app_container .card_app_empty > dl {
+  text-align: center;
+  /*
+      .btn {
+        > a {
+          @include base_button_style(
+            $baseColor_turquoiseblue,
+            $fontSize:16,
+            $height:48,
+            $shadow:none
+          );
+          width: vw(199);
+        }
+      }
+      */
+}
+
+.card_swipe_app_container .card_app_empty > dl > dt {
+  font-size: 5.1vw;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.card_swipe_app_container .card_app_empty > dl .text {
+  font-size: 3.7vw;
+  margin: 1.6vw 0 6.4vw;
+  line-height: 1;
+}
+
 .card_swipe_app_container .empty_state-enter-active, .card_swipe_app_container .empty_state-leave-active {
   -webkit-transition: opacity .3s ease;
   transition: opacity .3s ease;
