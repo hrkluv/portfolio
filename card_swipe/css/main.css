@@ -221,7 +221,7 @@ body.card_swipe .pointer_events_none {
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 10.7vw;
+  background-size: 7.5vw;
   -webkit-box-shadow: 0px 16px 28px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 16px 28px rgba(0, 0, 0, 0.08);
 }
