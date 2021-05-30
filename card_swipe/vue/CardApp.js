@@ -87,7 +87,7 @@ const cardModule = Vue.extend({
           this.deltaY = toY + e.deltaY
           this.rotate = rotate
 
-          const type = (this.state === 1)
+          //const type = (this.state === 1)
 
           /*
           if (type) {
@@ -130,6 +130,7 @@ const cardModule = Vue.extend({
         this.$emit('on-action',state)
       }
     },
+    /*
     async cardOpen() {
       const res = await this.interestedOpenApi(this.card.interested_id)
       const isSuccess = Boolean( parseInt(res.success,10) )
@@ -154,7 +155,6 @@ const cardModule = Vue.extend({
       const res = await axios.get(`/api/interested/open?interested_id=${id}`)
       return res.data
     },
-    /*
     async openProfile() {
       if (this.isOpened) {
         const res = await this.interestedOpenApi(this.card.interested_id)
@@ -339,6 +339,12 @@ export const cardApp = Vue.extend({
       })
     },
     async processAll(state) {
+      await this.transitionEnd()
+      this.$delete(this.cardData, this.lastIdx)
+      setTimeout(() => {
+        this.processing = false
+      },300)
+      /*
       try {
         const [judge] = await Promise.all([
           this.judge(state),
@@ -368,6 +374,7 @@ export const cardApp = Vue.extend({
         }
         this.processing = false
       }
+      */
     },
     async onAction(state) {
       this.processAll(state)
