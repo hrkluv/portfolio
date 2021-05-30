@@ -274,6 +274,20 @@ export const cardApp = Vue.extend({
           age: 26,
           tdfk: "東京都",
           job: "事務職/OL"
+        },
+        {
+          id:2,
+          image_url: "./img/photo_02.jpg",
+          age: 21,
+          tdfk: "埼玉県",
+          job: "事務職/OL"
+        },
+        {
+          id:3,
+          image_url: "./img/photo_03.jpg",
+          age: 28,
+          tdfk: "千葉県",
+          job: "事務職/OL"
         }
       ]
       const length = resultBody.length
