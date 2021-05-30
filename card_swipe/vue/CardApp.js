@@ -343,6 +343,9 @@ export const cardApp = Vue.extend({
     async processAll(state) {
       await this.transitionEnd()
       this.$delete(this.cardData, this.lastIdx)
+      if (this.cardData.length < 1) {
+        this.$emit('empty-state')
+      }
       setTimeout(() => {
         this.processing = false
       },300)
