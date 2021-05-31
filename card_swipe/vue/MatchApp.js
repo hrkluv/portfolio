@@ -34,9 +34,6 @@ export default Vue.extend({
     nameId() {
       return this.matchData.target_member.id
     },
-    isOnline() {
-      return Boolean(this.matchData.target_member.online_flg)
-    },
     inputMessage() {
       return this.message.length > 0
     },
@@ -98,7 +95,7 @@ export default Vue.extend({
     }
   },
   template: `
-    <div class="match_app_template" :style="indicate.body" :class="[setSlideup,isFocus]" :style="setTranslate">
+    <div class="match_app_template" :style="[indicate.body,setTranslate]" :class="[setSlideup,isFocus]">
       <span class="close" @click="closePopup"></span>
       <div class="match_container">
         <header>
@@ -116,7 +113,7 @@ export default Vue.extend({
           </ul></dd>
         </dl>
         <dl class="target_status">
-          <dt class="name">{{matchData.target_member.name}} <span class="online" v-if="isOnline"></dt>
+          <dt class="name">{{matchData.target_member.name}}</dt>
           <dd class="age_tdfk">{{matchData.target_member.age}}歳 {{matchData.target_member.tdfk}}</dd>
           <dd class="profile_link"><a :href="'/profile/' + nameId + '/'">プロフィールを見る</a></dd>
         </dl>
