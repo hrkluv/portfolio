@@ -98,10 +98,10 @@ export default Vue.extend({
     <div class="match_app_template" :style="[indicate.body,setTranslate]" :class="[setSlideup,isFocus]">
       <span class="close" @click="closePopup"></span>
       <div class="match_container">
-        <header>
+        <div class="header">
           <div class="label">マッチしました！</div>
           <p>{{matchData.target_member.name}}にメッセージを送ってみよう</p>
-        </header>
+        </div>
         <div class="thumb_wrap">
           <img :src="matchData.image_url" class="member">
           <img :src="matchData.target_member.image_url" class="target">

@@ -287,7 +287,7 @@ body.card_swipe .pointer_events_none {
   right: 0;
 }
 
-.card_swipe_app_container .match_app_template .match_container header {
+.card_swipe_app_container .match_app_template .match_container .header {
   top: 33.1vw;
   width: 100%;
   text-align: center;
@@ -296,12 +296,12 @@ body.card_swipe .pointer_events_none {
   transition: .3s;
 }
 
-.card_swipe_app_container .match_app_template .match_container header .label {
+.card_swipe_app_container .match_app_template .match_container .header .label {
   font-size: 6.4vw;
   font-weight: 700;
 }
 
-.card_swipe_app_container .match_app_template .match_container header > p {
+.card_swipe_app_container .match_app_template .match_container .header > p {
   margin-top: 1.6vw;
 }
 
