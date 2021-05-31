@@ -115,7 +115,7 @@ export default Vue.extend({
         <dl class="target_status">
           <dt class="name">{{matchData.target_member.name}}</dt>
           <dd class="age_tdfk">{{matchData.target_member.age}}歳 {{matchData.target_member.tdfk}}</dd>
-          <dd class="profile_link"><a :href="'/profile/' + nameId + '/'">プロフィールを見る</a></dd>
+          <dd class="profile_link"><span>プロフィールを見る</span></dd>
         </dl>
         <input type="hidden" name="id" :value="nameId">
         <div class="message_area" v-if="!isShortage">

@@ -268,7 +268,7 @@ body.card_swipe .pointer_events_none {
   display: block;
   width: 6.4vw;
   height: 6.4vw;
-  background: url(/img/common/close_w_x.png) no-repeat center/6.4vw;
+  background: url(../img/close_w_x.png) no-repeat center/6.4vw;
 }
 
 .card_swipe_app_container .match_app_template .match_container {
@@ -378,7 +378,7 @@ body.card_swipe .pointer_events_none {
   transition: .3s;
 }
 
-.card_swipe_app_container .match_app_template .match_container .target_status .profile_link > a {
+.card_swipe_app_container .match_app_template .match_container .target_status .profile_link > span {
   display: inline-grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -424,7 +424,7 @@ body.card_swipe .pointer_events_none {
   display: block;
   width: 4.3vw;
   height: 4.3vw;
-  background: url(/img/common/heart_l.png) no-repeat center/4.3vw;
+  background: url(../img/heart.png) no-repeat center/4.3vw;
   margin-right: 1.3vw;
 }
 
@@ -514,7 +514,7 @@ body.card_swipe .pointer_events_none {
   display: block;
   width: 8.5vw;
   height: 8.5vw;
-  background: url(/img/type/btn_message_send.png) no-repeat right 1.3vw center/8.5vw;
+  background: url(../img/btn_message_send.png) no-repeat right 1.3vw center/8.5vw;
 }
 
 .card_swipe_app_container .match_app_template .match_container .message_area .message_send .send_ok {

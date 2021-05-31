@@ -221,7 +221,7 @@ body.card_swipe {
       width: vw(24);
       height: vw(24);
       background:
-        url(/img/common/close_w_x.png)
+        url(../img/close_w_x.png)
         no-repeat center / vw(24)
       ;
     }
@@ -305,7 +305,7 @@ body.card_swipe {
         }
         .profile_link {
           transition: .3s;
-          > a {
+          > span {
             display: inline-grid;
             align-items: center;
             justify-items: center;
@@ -340,7 +340,7 @@ body.card_swipe {
             width: vw(16);
             height: vw(16);
             background:
-              url(/img/common/heart_l.png)
+              url(../img/heart.png)
               no-repeat center / vw(16);
             ;
             margin-right: vw(5);
@@ -411,7 +411,7 @@ body.card_swipe {
             width: vw(32);
             height: vw(32);
             background: 
-            url(/img/type/btn_message_send.png)
+            url(../img/btn_message_send.png)
               no-repeat right vw(5) center / vw(32)
             ;
           }
