@@ -1,4 +1,5 @@
 'use strict';
+import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js'
 import slideUp from './slideup_view.js';
 
 export default Vue.extend({
