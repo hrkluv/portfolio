@@ -348,6 +348,7 @@ export const cardApp = Vue.extend({
       if (this.cardData.length < 1) {
         this.$emit('empty-state')
       }
+      if (isMatched) this.$emit('on-match',judge)
       setTimeout(() => {
         this.processing = false
       },300)

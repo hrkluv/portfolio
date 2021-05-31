@@ -191,6 +191,269 @@ body.card_swipe {
     }
   }
 }
+@mixin match_modal {
+  .match_app_template {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    width: 100vw;
+    background-color: #ff6f6f;
+    transition: .2s;
+    visibility: hidden;
+    overflow: hidden;
+    &.slideup {
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+    .close {
+      position: absolute;
+      top: vw(26);
+      left: vw(16);
+      z-index: 1;
+      display: block;
+      width: vw(24);
+      height: vw(24);
+      background:
+        url(/img/common/close_w_x.png)
+        no-repeat center / vw(24)
+      ;
+    }
+    .match_container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      color: #fff;
+      header,
+      .thumb_wrap,
+      .target_status,
+      .affinity,
+      .message_area,
+      .shortage_area,
+      .send_notice {
+        position: absolute;
+        left: 0;
+        right: 0;
+      }
+      header {
+        top: vw(124);
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        transition: .3s;
+        .label {
+          font-size: vw(24);
+          font-weight: 700;
+        }
+        > p {
+          margin-top: vw(6);
+        }
+      }
+      .thumb_wrap {
+        top: vw(205);
+        width: vw(220);
+        height: vw(122);
+        margin: 0 auto;
+        > img {
+          position: absolute;
+          top: 0;
+          width: vw(106);
+          height: vw(106);
+          border-radius: 50%;
+          border: 8px solid #ff6f6f;
+          transition: .3s;
+          &.member {
+            left: 0;
+          }
+          &.target {
+            right: 0;
+            z-index: 1;
+          }
+        }
+      }
+      .target_status {
+        top: vw(332);
+        width: 100%;
+        text-align: center;
+        transition: .3s;
+        > dt {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: vw(20);
+          font-weight: 700;
+          line-height: 1;
+          .online {
+            display: inline-block;
+            width: vw(8);
+            height: vw(8);
+            background-color: #1DDF99;
+            border-radius: 50%;
+            margin-left: vw(4);
+          }
+        }
+        .age_tdfk {
+          margin: vw(9) 0;
+          line-height: 1;
+        }
+        .profile_link {
+          transition: .3s;
+          > a {
+            display: inline-grid;
+            align-items: center;
+            justify-items: center;
+            place-items: center;
+            width: vw(126);
+            height: vw(30);
+            color: inherit;
+            font-size: vw(12);
+            font-weight: 700;
+            border: 1px solid #fff;
+            border-radius: vw(16);
+          }
+        }
+      }
+      .affinity {
+        top: vw(340);
+        width: calc( 100% - #{vw(76)} );
+        margin: 0 auto;
+        opacity: 0;
+        transition: .3s;
+        > dt {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: vw(20);
+          font-weight: 700;
+          text-align: center;
+          margin-bottom: vw(6);
+          &::before {
+            content: "";
+            display: block;
+            width: vw(16);
+            height: vw(16);
+            background:
+              url(/img/common/heart_l.png)
+              no-repeat center / vw(16);
+            ;
+            margin-right: vw(5);
+          }
+        }
+        > dd > ul {
+          display: flex;
+          flex-wrap: wrap;
+          > li {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            height: vw(26);
+            padding: 0 vw(8);
+            font-size: vw(10);
+            border: 1px solid #fff;
+            border-radius: vw(13);
+            margin: 2px;
+          }
+        }
+      }
+      .message_area,
+      .shortage_area {
+        top: vw(451);
+        width: calc( 100% - #{vw(32)} );
+        height: vw(48);
+        margin: 0 auto;
+      }
+      .message_area {
+        display: grid;
+        grid-template-columns: 1fr vw(52);
+        grid-template-rows: vw(48);
+        .message_textarea {
+          display: flex;
+          align-items: center;
+          //width: 100%;
+          //height: vw(48);
+          padding: 0 vw(12);
+          background-color: #fff;
+          border-radius: vw(24);
+          box-sizing: border-box;
+          > textarea {
+            border: 0;
+            border-radius: 0;
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+        .message_send {
+          //width: vw(52);
+          //height: vw(48);
+          display: grid;
+          align-items: center;
+          justify-items: center;
+          place-items: center;
+          .send_prev {
+            justify-self: end;
+            display: block;
+            width: vw(32);
+            height: vw(32);
+            background: 
+            url(/img/type/btn_message_send.png)
+              no-repeat right vw(5) center / vw(32)
+            ;
+          }
+          .send_ok {
+            color: #fff;
+            //@include font_hiragino_w6;
+            font-size: vw(17);
+            &.can_send {
+              color: #35C8E9;
+            }
+          }
+        }
+      }
+      .send_notice {
+        top: vw(510);
+        width: 100%;
+        font-size: vw(10);
+        padding: 0 vw(12);
+        box-sizing: border-box;
+      }
+    }
+    &.is_focus {
+      background-color: #6e292c;
+      .match_container {
+        header {
+          opacity: 0;
+        }
+        .thumb_wrap {
+          > img {
+            width: vw(64);
+            height: vw(64);
+            border: none;
+            &.member {
+              opacity: 0;
+            }
+            &.target {
+              //transform: translate3d(-#{vw(78)}, #{vw(52)}, 0);
+              transform: translate3d(-#{vw(78)}, 0, 0);
+            }
+          }
+        }
+        .target_status {
+          transform: translate3d(0, -#{vw(52)}, 0);
+          .profile_link {
+            opacity: 0;
+          }
+        }
+        .affinity {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
 @mixin empty_state {
   .card_app_empty {
     position: fixed;
@@ -234,6 +497,7 @@ body.card_swipe {
   position: relative;
   @include card_wrap;
   @include btn_wrap;
+  @include match_modal;
   @include empty_state;
   .empty_state-enter-active, .empty_state-leave-active {
     transition: opacity .3s ease;

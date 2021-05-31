@@ -236,6 +236,328 @@ body.card_swipe .pointer_events_none {
   background-image: url(../img/skip.png);
 }
 
+.card_swipe_app_container .match_app_template {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  width: 100vw;
+  background-color: #ff6f6f;
+  -webkit-transition: .2s;
+  transition: .2s;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.card_swipe_app_container .match_app_template.slideup {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.card_swipe_app_container .match_app_template .close {
+  position: absolute;
+  top: 6.9vw;
+  left: 4.3vw;
+  z-index: 1;
+  display: block;
+  width: 6.4vw;
+  height: 6.4vw;
+  background: url(/img/common/close_w_x.png) no-repeat center/6.4vw;
+}
+
+.card_swipe_app_container .match_app_template .match_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+}
+
+.card_swipe_app_container .match_app_template .match_container header,
+.card_swipe_app_container .match_app_template .match_container .thumb_wrap,
+.card_swipe_app_container .match_app_template .match_container .target_status,
+.card_swipe_app_container .match_app_template .match_container .affinity,
+.card_swipe_app_container .match_app_template .match_container .message_area,
+.card_swipe_app_container .match_app_template .match_container .shortage_area,
+.card_swipe_app_container .match_app_template .match_container .send_notice {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.card_swipe_app_container .match_app_template .match_container header {
+  top: 33.1vw;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.card_swipe_app_container .match_app_template .match_container header .label {
+  font-size: 6.4vw;
+  font-weight: 700;
+}
+
+.card_swipe_app_container .match_app_template .match_container header > p {
+  margin-top: 1.6vw;
+}
+
+.card_swipe_app_container .match_app_template .match_container .thumb_wrap {
+  top: 54.7vw;
+  width: 58.7vw;
+  height: 32.5vw;
+  margin: 0 auto;
+}
+
+.card_swipe_app_container .match_app_template .match_container .thumb_wrap > img {
+  position: absolute;
+  top: 0;
+  width: 28.3vw;
+  height: 28.3vw;
+  border-radius: 50%;
+  border: 8px solid #ff6f6f;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.card_swipe_app_container .match_app_template .match_container .thumb_wrap > img.member {
+  left: 0;
+}
+
+.card_swipe_app_container .match_app_template .match_container .thumb_wrap > img.target {
+  right: 0;
+  z-index: 1;
+}
+
+.card_swipe_app_container .match_app_template .match_container .target_status {
+  top: 88.5vw;
+  width: 100%;
+  text-align: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.card_swipe_app_container .match_app_template .match_container .target_status > dt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 5.3vw;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.card_swipe_app_container .match_app_template .match_container .target_status > dt .online {
+  display: inline-block;
+  width: 2.1vw;
+  height: 2.1vw;
+  background-color: #1DDF99;
+  border-radius: 50%;
+  margin-left: 1.1vw;
+}
+
+.card_swipe_app_container .match_app_template .match_container .target_status .age_tdfk {
+  margin: 2.4vw 0;
+  line-height: 1;
+}
+
+.card_swipe_app_container .match_app_template .match_container .target_status .profile_link {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.card_swipe_app_container .match_app_template .match_container .target_status .profile_link > a {
+  display: inline-grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  place-items: center;
+  width: 33.6vw;
+  height: 8vw;
+  color: inherit;
+  font-size: 3.2vw;
+  font-weight: 700;
+  border: 1px solid #fff;
+  border-radius: 4.3vw;
+}
+
+.card_swipe_app_container .match_app_template .match_container .affinity {
+  top: 90.7vw;
+  width: calc( 100% - 20.3vw);
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.card_swipe_app_container .match_app_template .match_container .affinity > dt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5.3vw;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.6vw;
+}
+
+.card_swipe_app_container .match_app_template .match_container .affinity > dt::before {
+  content: "";
+  display: block;
+  width: 4.3vw;
+  height: 4.3vw;
+  background: url(/img/common/heart_l.png) no-repeat center/4.3vw;
+  margin-right: 1.3vw;
+}
+
+.card_swipe_app_container .match_app_template .match_container .affinity > dd > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card_swipe_app_container .match_app_template .match_container .affinity > dd > ul > li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6.9vw;
+  padding: 0 2.1vw;
+  font-size: 2.7vw;
+  border: 1px solid #fff;
+  border-radius: 3.5vw;
+  margin: 2px;
+}
+
+.card_swipe_app_container .match_app_template .match_container .message_area,
+.card_swipe_app_container .match_app_template .match_container .shortage_area {
+  top: 120.3vw;
+  width: calc( 100% - 8.5vw);
+  height: 12.8vw;
+  margin: 0 auto;
+}
+
+.card_swipe_app_container .match_app_template .match_container .message_area {
+  display: grid;
+  grid-template-columns: 1fr 13.9vw;
+  grid-template-rows: 12.8vw;
+}
+
+.card_swipe_app_container .match_app_template .match_container .message_area .message_textarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 3.2vw;
+  background-color: #fff;
+  border-radius: 6.4vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card_swipe_app_container .match_app_template .match_container .message_area .message_textarea > textarea {
+  border: 0;
+  border-radius: 0;
+}
+
+.card_swipe_app_container .match_app_template .match_container .message_area .message_textarea > textarea:focus {
+  outline: none;
+}
+
+.card_swipe_app_container .match_app_template .match_container .message_area .message_send {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  place-items: center;
+}
+
+.card_swipe_app_container .match_app_template .match_container .message_area .message_send .send_prev {
+  justify-self: end;
+  display: block;
+  width: 8.5vw;
+  height: 8.5vw;
+  background: url(/img/type/btn_message_send.png) no-repeat right 1.3vw center/8.5vw;
+}
+
+.card_swipe_app_container .match_app_template .match_container .message_area .message_send .send_ok {
+  color: #fff;
+  font-size: 4.5vw;
+}
+
+.card_swipe_app_container .match_app_template .match_container .message_area .message_send .send_ok.can_send {
+  color: #35C8E9;
+}
+
+.card_swipe_app_container .match_app_template .match_container .send_notice {
+  top: 136vw;
+  width: 100%;
+  font-size: 2.7vw;
+  padding: 0 3.2vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card_swipe_app_container .match_app_template.is_focus {
+  background-color: #6e292c;
+}
+
+.card_swipe_app_container .match_app_template.is_focus .match_container header {
+  opacity: 0;
+}
+
+.card_swipe_app_container .match_app_template.is_focus .match_container .thumb_wrap > img {
+  width: 17.1vw;
+  height: 17.1vw;
+  border: none;
+}
+
+.card_swipe_app_container .match_app_template.is_focus .match_container .thumb_wrap > img.member {
+  opacity: 0;
+}
+
+.card_swipe_app_container .match_app_template.is_focus .match_container .thumb_wrap > img.target {
+  -webkit-transform: translate3d(-20.8vw, 0, 0);
+          transform: translate3d(-20.8vw, 0, 0);
+}
+
+.card_swipe_app_container .match_app_template.is_focus .match_container .target_status {
+  -webkit-transform: translate3d(0, -13.9vw, 0);
+          transform: translate3d(0, -13.9vw, 0);
+}
+
+.card_swipe_app_container .match_app_template.is_focus .match_container .target_status .profile_link {
+  opacity: 0;
+}
+
+.card_swipe_app_container .match_app_template.is_focus .match_container .affinity {
+  opacity: 1;
+}
+
 .card_swipe_app_container .card_app_empty {
   position: fixed;
   top: 0;

@@ -1,7 +1,7 @@
 'use strict';
 import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js'
 import {cardApp} from './CardApp.js'
-//import matchApp from '/jvs/vue/pages/type/MatchApp.js'
+import matchApp from './MatchApp.js'
 //import needPayment from '/jvs/vue/pages/type/NeedPayment.js'
 
 new Vue({
@@ -26,7 +26,7 @@ new Vue({
   },
   components: {
     cardApp,
-    //matchApp,
+    matchApp,
     //needPayment
   },
   computed: {
@@ -60,11 +60,11 @@ new Vue({
       }
       this.$set(this.indicate.body, 'height', `${winH}px`)
     },
-    /*
     onMatch(data) {
       const matchApp = this.$refs.matchApp
       matchApp.setMatchData(data)
     },
+    /*
     needPayment (state) {
       const needPaymentPopup = this.$refs.needPayment
       needPaymentPopup.onChangeState(state)
