@@ -482,6 +482,7 @@ body.card_swipe .pointer_events_none {
 }
 
 .card_swipe_app_container .match_app_template .match_container .message_area .message_textarea > textarea {
+  width: 100%;
   font-size: 16px;
   line-height: 1.4;
   padding: 6px;
