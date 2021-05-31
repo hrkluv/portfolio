@@ -272,6 +272,7 @@ export const cardApp = Vue.extend({
       const resultBody = [
         {
           id:1,
+          name: "シロ",
           image_url: "./img/photo_01.jpg",
           age: 26,
           tdfk: "東京都",
@@ -279,6 +280,7 @@ export const cardApp = Vue.extend({
         },
         {
           id:2,
+          name: "シャム",
           image_url: "./img/photo_02.jpg",
           age: 21,
           tdfk: "埼玉県",
@@ -286,6 +288,7 @@ export const cardApp = Vue.extend({
         },
         {
           id:3,
+          name: "ブチ",
           image_url: "./img/photo_03.jpg",
           age: 28,
           tdfk: "千葉県",
@@ -332,6 +335,26 @@ export const cardApp = Vue.extend({
       }
     },
     */
+    async judge(state) {
+      const judge = {
+        "result_body":{
+            "is_matched":1
+        },
+        "extra_data":{
+            "image_url":"./img/my.jpg",
+            "affinity":{
+              "words":[
+                "ヴェルファイア",
+                "停止"
+              ]
+            },
+            "can_send_mail":"1",
+            "target_member":this.currentRef.card
+        }
+      }
+      return {
+      }
+    },
     onSwipe(state) {
       this.currentRef.onSwipe(state)
     },
@@ -343,13 +366,15 @@ export const cardApp = Vue.extend({
       })
     },
     async processAll(state) {
-      await this.transitionEnd()
+      const [judge] = await Promise.all([
+        this.judge(state),
+        this.transitionEnd()
+      ])
       this.$delete(this.cardData, this.lastIdx)
       if (this.cardData.length < 1) {
         this.$emit('empty-state')
       }
-      console.log(this.currentRef)
-      const isMatched = (state == 1)
+      const isMatched = Boolean( judge.result_body.is_matched )
       if (isMatched) this.$emit('on-match',judge)
       setTimeout(() => {
         this.processing = false
