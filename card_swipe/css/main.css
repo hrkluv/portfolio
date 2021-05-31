@@ -1,3 +1,7 @@
+body {
+  line-height: 1.4;
+}
+
 [v-cloak] {
   display: none;
 }
@@ -275,7 +279,7 @@ body.card_swipe .pointer_events_none {
   color: #fff;
 }
 
-.card_swipe_app_container .match_app_template .match_container header,
+.card_swipe_app_container .match_app_template .match_container .header,
 .card_swipe_app_container .match_app_template .match_container .thumb_wrap,
 .card_swipe_app_container .match_app_template .match_container .target_status,
 .card_swipe_app_container .match_app_template .match_container .affinity,
@@ -450,8 +454,7 @@ body.card_swipe .pointer_events_none {
   margin: 2px;
 }
 
-.card_swipe_app_container .match_app_template .match_container .message_area,
-.card_swipe_app_container .match_app_template .match_container .shortage_area {
+.card_swipe_app_container .match_app_template .match_container .message_area {
   top: 120.3vw;
   width: calc( 100% - 8.5vw);
   height: 12.8vw;
@@ -479,8 +482,18 @@ body.card_swipe .pointer_events_none {
 }
 
 .card_swipe_app_container .match_app_template .match_container .message_area .message_textarea > textarea {
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 6px;
+  height: auto;
+  vertical-align: bottom;
+  resize: none;
   border: 0;
   border-radius: 0;
+}
+
+.card_swipe_app_container .match_app_template .match_container .message_area .message_textarea > textarea:-webkit-search-decoration {
+  display: none;
 }
 
 .card_swipe_app_container .match_app_template .match_container .message_area .message_textarea > textarea:focus {

@@ -1,5 +1,9 @@
 @import "../../scss/function";
 
+body {
+  line-height: 1.4;
+}
+
 [v-cloak] {
   display: none;
 }
@@ -227,7 +231,7 @@ body.card_swipe {
       left: 0;
       width: 100%;
       color: #fff;
-      header,
+      .header,
       .thumb_wrap,
       .target_status,
       .affinity,
@@ -358,8 +362,7 @@ body.card_swipe {
           }
         }
       }
-      .message_area,
-      .shortage_area {
+      .message_area {
         top: vw(451);
         width: calc( 100% - #{vw(32)} );
         height: vw(48);
@@ -379,8 +382,17 @@ body.card_swipe {
           border-radius: vw(24);
           box-sizing: border-box;
           > textarea {
+            font-size: 16px;
+            line-height: 1.4;
+            padding: 6px;
+            height: auto;
+            vertical-align: bottom;
+            resize: none;
             border: 0;
             border-radius: 0;
+            &:-webkit-search-decoration {
+              display: none;
+            }
             &:focus {
               outline: none;
             }
