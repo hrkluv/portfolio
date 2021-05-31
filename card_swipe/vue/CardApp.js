@@ -179,7 +179,7 @@ const cardModule = Vue.extend({
     */
   },
   template: `
-    <a href="#" class="card_item" :class="cardClass" :style="getTranslatePositionStyle">
+    <div class="card_item" :class="cardClass" :style="getTranslatePositionStyle">
       <div class="card_item_photo">
           <div class="photo" :style="{backgroundImage: 'url(' + card.image_url + ')'}"></div>
       </div>
@@ -187,7 +187,7 @@ const cardModule = Vue.extend({
         <dt>{{card.age}}歳 {{card.tdfk}}</dt>
         <dd class="job">{{card.job}}</dd>
       </dl>
-    </a>
+    </div>
   `
 })
 
