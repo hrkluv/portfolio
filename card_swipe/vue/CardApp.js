@@ -352,8 +352,7 @@ export const cardApp = Vue.extend({
             "target_member":this.currentRef.card
         }
       }
-      return {
-      }
+      return judge
     },
     onSwipe(state) {
       this.currentRef.onSwipe(state)
