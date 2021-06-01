@@ -336,9 +336,10 @@ export const cardApp = Vue.extend({
     },
     */
     async judge(state) {
+      const match = (state === 1)
       const judge = {
         "result_body":{
-            "is_matched":1
+            "is_matched":match
         },
         "extra_data":{
             "image_url":"./img/my.jpg",
