@@ -4,7 +4,7 @@ export default {
   data() {
     return {
       height: '',
-      exheight: 95 ,//safariフッターナビ分の高さ
+      exheight: 95 ,
       isSlideup: false,
       translateY: 9999
     }

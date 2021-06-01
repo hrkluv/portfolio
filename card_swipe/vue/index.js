@@ -2,7 +2,6 @@
 import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.esm.browser.js'
 import {cardApp} from './CardApp.js'
 import matchApp from './MatchApp.js'
-//import needPayment from '/jvs/vue/pages/type/NeedPayment.js'
 
 new Vue({
   el: "#typeCardUiApp",
@@ -26,8 +25,7 @@ new Vue({
   },
   components: {
     cardApp,
-    matchApp,
-    //needPayment
+    matchApp
   },
   computed: {
     setIndicateClass() {
@@ -41,13 +39,13 @@ new Vue({
   },
   methods: {
     setIndicatedArea() {
-      const maxArea = 588 //上部余白16px分込み
+      const maxArea = 588
       const winH = window.innerHeight
       const header = document.querySelector(".type-cardui_header")
       const headerH = header ? header.getBoundingClientRect().height : 0
       const bottomnav = document.querySelector("#bottom_navigation")
       const bottomnavH = bottomnav ? bottomnav.getBoundingClientRect().height : 0
-      const indicatedArea = winH - headerH - bottomnavH //ヘッダーラベル,ボトムナビ分
+      const indicatedArea = winH - headerH - bottomnavH
       if (indicatedArea >= maxArea) {
         this.$set(this.indicate.container, 'height', `${maxArea}px`)
         this.$set(this.indicate.card, 'height', '452px')
@@ -64,12 +62,6 @@ new Vue({
       const matchApp = this.$refs.matchApp
       matchApp.setMatchData(data)
     },
-    /*
-    needPayment (state) {
-      const needPaymentPopup = this.$refs.needPayment
-      needPaymentPopup.onChangeState(state)
-    },
-    */
     emptyState() {
       this.hasCard = false
     }
