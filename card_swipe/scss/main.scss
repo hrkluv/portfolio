@@ -1,9 +1,5 @@
 @import "../../scss/function";
 
-body {
-  line-height: 1.4;
-}
-
 [v-cloak] {
   display: none;
 }
@@ -73,7 +69,6 @@ body.card_swipe {
           border-radius: 24px 24px 0 0;
           transition: .3s;
           filter: brightness(100%);
-          //filter: blur(20px);
         }
         .first_cover {
           position: absolute;
@@ -375,8 +370,6 @@ body.card_swipe {
         .message_textarea {
           display: flex;
           align-items: center;
-          //width: 100%;
-          //height: vw(48);
           padding: 0 vw(12);
           background-color: #fff;
           border-radius: vw(24);
@@ -400,8 +393,6 @@ body.card_swipe {
           }
         }
         .message_send {
-          //width: vw(52);
-          //height: vw(48);
           display: grid;
           align-items: center;
           justify-items: center;
@@ -418,7 +409,6 @@ body.card_swipe {
           }
           .send_ok {
             color: #fff;
-            //@include font_hiragino_w6;
             font-size: vw(17);
             &.can_send {
               color: #35C8E9;
@@ -449,7 +439,6 @@ body.card_swipe {
               opacity: 0;
             }
             &.target {
-              //transform: translate3d(-#{vw(78)}, #{vw(52)}, 0);
               transform: translate3d(-#{vw(78)}, 0, 0);
             }
           }
@@ -490,19 +479,6 @@ body.card_swipe {
         margin: vw(6) 0 vw(24);
         line-height: 1;
       }
-      /*
-      .btn {
-        > a {
-          @include base_button_style(
-            $baseColor_turquoiseblue,
-            $fontSize:16,
-            $height:48,
-            $shadow:none
-          );
-          width: vw(199);
-        }
-      }
-      */
     }
   }
 }
