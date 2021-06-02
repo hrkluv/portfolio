@@ -1,12 +1,12 @@
-.register_community_list_wrap {
+.select_check_list_container {
   padding: 4.3vw;
 }
 
-.register_community_list_wrap.display_select_submit {
+.select_check_list_container.display_select_submit {
   padding: 4.3vw 4.3vw 26.9vw;
 }
 
-.register_community_list_wrap .fukidashi_label {
+.select_check_list_container .balloon_label {
   position: relative;
   width: 70.4vw;
   height: 8.5vw;
@@ -25,52 +25,52 @@
   margin: 0 auto;
 }
 
-.register_community_list_wrap .fukidashi_label::after {
+.select_check_list_container .balloon_label::after {
   content: "";
-  display: block;
-  width: 4.8vw;
-  height: 2.1vw;
   position: absolute;
   top: 8.5vw;
   left: 30.9vw;
-  background: url(/img/tutorial/community/triangle.png) no-repeat left top/100% auto;
+  border-top: 9px solid #ef5b7f;
+  border-right: 9px solid #fff;
+  border-left: 9px solid #fff;
+  border-bottom: 9px solid #fff;
 }
 
-.register_community_list_wrap .list_wrap {
+.select_check_list_container .list_wrap {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 0 4.3vw;
   padding-top: 5.3vw;
 }
 
-.register_community_list_wrap .list_wrap .list_item .check_box {
+.select_check_list_container .list_wrap .list_item .check_box {
   display: none;
 }
 
-.register_community_list_wrap .list_wrap .list_item .check_label {
+.select_check_list_container .list_wrap .list_item .check_label {
   position: relative;
   display: block;
   width: 100%;
   height: 100%;
 }
 
-.register_community_list_wrap .list_wrap .list_item .check_label .thumb_wrap {
+.select_check_list_container .list_wrap .list_item .check_label .thumb_wrap {
   position: relative;
 }
 
-.register_community_list_wrap .list_wrap .list_item .check_label .thumb_wrap .thumb {
+.select_check_list_container .list_wrap .list_item .check_label .thumb_wrap .thumb {
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-.register_community_list_wrap .list_wrap .list_item .check_label .title {
+.select_check_list_container .list_wrap .list_item .check_label .title {
   font-size: 3.5vw;
   padding: 3.2vw;
   line-height: 1.3;
 }
 
-.register_community_list_wrap .list_wrap .list_item .check_box:checked + .check_label::before {
+.select_check_list_container .list_wrap .list_item .check_box:checked + .check_label::before {
   content: attr(data-check-count);
   position: absolute;
   z-index: 2;
@@ -98,7 +98,7 @@
           filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
-.register_community_list_wrap .list_wrap .list_item .check_box:checked + .check_label .thumb_wrap::after {
+.select_check_list_container .list_wrap .list_item .check_box:checked + .check_label .thumb_wrap::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -111,7 +111,7 @@
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-.register_community_list_wrap .select_submit {
+.select_check_list_container .select_submit {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -127,7 +127,32 @@
           transform: translate3d(0, 22.9vw, 0);
 }
 
-.register_community_list_wrap .select_submit.slideup {
+.select_check_list_container .select_submit .submit_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 50px;
+  height: 13.3vw;
+  color: #fff;
+  font-size: calc(14rem / 10);
+  font-size: 3.7vw;
+  font-weight: bold;
+  border-radius: calc( 50px / 2);
+  background-color: #ff6f6f;
+  -webkit-box-shadow: 0px -2px 0px 2px #ff5656 inset;
+          box-shadow: 0px -2px 0px 2px #ff5656 inset;
+  margin: 0 auto;
+  border: none;
+}
+
+.select_check_list_container .select_submit.slideup {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }

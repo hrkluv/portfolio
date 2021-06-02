@@ -1,11 +1,12 @@
 @import "../../scss/function";
+@import "../../scss/mixin";
 
-.register_community_list_wrap {
+.select_check_list_container {
   padding: vw(16);
   &.display_select_submit {
     padding: vw(16) vw(16) vw(101);
   }
-  .fukidashi_label {
+  .balloon_label {
     position: relative;
     width: vw(264);
     height: vw(32);
@@ -18,13 +19,13 @@
     margin: 0 auto;
     &::after {
       content: "";
-      display: block;
-      width: vw(18);
-      height: vw(8);
       position: absolute;
       top: vw(32);
       left: vw(116);
-      background: url(/img/tutorial/community/triangle.png) no-repeat left top / 100% auto;
+      border-top: 9px solid #ef5b7f;
+      border-right: 9px solid #fff;
+      border-left: 9px solid #fff;
+      border-bottom: 9px solid #fff;
     }
   }
   .list_wrap {
@@ -104,6 +105,9 @@
     box-sizing: border-box;
     transition: .2s;
     transform: translate3d(0, #{vw(86)}, 0);
+    .submit_btn {
+      @include base_button_style(#ff6f6f);
+    }
     &.slideup {
       transform: translate3d(0, 0, 0);
     }
