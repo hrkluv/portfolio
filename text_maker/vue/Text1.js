@@ -1,6 +1,6 @@
 'use strict';
 
-export const text1 = [
+export default text1 = [
 "教会",
 "神社",
 "宇宙",

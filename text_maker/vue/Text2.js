@@ -1,6 +1,6 @@
 'use strict';
 
-export const text2 = [
+export default text2 = [
 "空を飛ぶ",
 "成功する",
 "光り輝く",
