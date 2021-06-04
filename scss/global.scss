@@ -1,7 +1,29 @@
 @import './node_modules/reset-css/sass/reset';
+@import "../../scss/function";
 
 body {
   font-family: sans-serif;
   font-size: 14px;
   line-height: 1.4;
+}
+strong,b {
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+}
+[v-cloak] {
+  display: none;
+}
+
+header {
+  display: grid;
+  place-items: center;
+  height: vw(48);
+  background-color: #fff;
+  border-bottom: 1px solid #f2f4f5;
+  h1 {
+    font-size: vw(17);
+    font-weight: 700;
+  }
 }

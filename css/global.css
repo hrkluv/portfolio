@@ -62,3 +62,28 @@ body {
   font-size: 14px;
   line-height: 1.4;
 }
+
+strong, b {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+header {
+  display: grid;
+  place-items: center;
+  height: 12.8vw;
+  background-color: #fff;
+  border-bottom: 1px solid #f2f4f5;
+}
+
+header h1 {
+  font-size: 4.5vw;
+  font-weight: 700;
+}

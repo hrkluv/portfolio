@@ -1,21 +1,5 @@
 @import "../../scss/function";
 
-[v-cloak] {
-  display: none;
-}
-
-header {
-  display: grid;
-  place-items: center;
-  height: vw(48);
-  background-color: #fff;
-  border-bottom: 1px solid #f2f4f5;
-  h1 {
-    font-size: vw(17);
-    font-weight: 700;
-  }
-}
-
 body.card_swipe {
   overflow: hidden;
   background-color: #fff;

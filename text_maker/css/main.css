@@ -1,0 +1,301 @@
+.btn_meker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 14.9vw;
+  color: #000;
+  font-size: 4.8vw;
+  font-weight: bold;
+  background-color: #84D500;
+  border-radius: 7.5vw;
+  border: 2px solid #000;
+}
+
+.btn_age {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 10.7vw;
+  color: #000;
+  font-size: 3.7vw;
+  font-weight: bold;
+  background-color: #FFB033;
+  border-radius: 5.3vw;
+  border: 2px solid #000;
+}
+
+.btn_gray {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 14.9vw;
+  color: #000;
+  font-size: 3.7vw;
+  font-weight: bold;
+  background-color: #e6e6e6;
+  border-radius: 7.5vw;
+}
+
+.btn_meker.stop,
+.btn_gray.stop {
+  pointer-events: none;
+}
+
+.maker_head_container {
+  position: relative;
+  height: 120vw;
+}
+
+.maker_wrap {
+  position: absolute;
+  bottom: 6.4vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 2px solid #000;
+  width: 91.4%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 27px;
+}
+
+.maker_wrap .transition_cont {
+  width: 100%;
+  height: 64.5vw;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.maker_wrap .transition_cont.v-enter-active, .maker_wrap .transition_cont.v-leave-active {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.maker_wrap .transition_cont.v-enter, .maker_wrap .transition_cont.v-leave-to {
+  opacity: 0;
+}
+
+.maker_wrap .diagnosis_start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 7.5vw;
+}
+
+.maker_wrap .diagnosis_start > p {
+  font-size: 4.3vw;
+}
+
+.maker_wrap .diagnosis_start .user_name {
+  padding: 5.3vw 0;
+}
+
+.maker_wrap .diagnosis_start .user_name > input[type="text"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1;
+  padding: 8px 6px;
+  height: auto;
+  vertical-align: bottom;
+  text-align: center;
+  resize: none;
+}
+
+.maker_wrap .diagnosis_start .user_name > input[type="text"]::-webkit-search-decoration {
+  display: none;
+}
+
+.maker_wrap .diagnosis_start .user_name > input[type="text"]::focus {
+  outline-offset: -2px;
+}
+
+.maker_wrap .diagnosis_start .btn_wrap {
+  padding: 0 6.1vw;
+}
+
+.maker_wrap .diagnosis_result,
+.maker_wrap .diagnosis_tweet,
+.maker_wrap .diagnosis_finished {
+  height: 109.9vw;
+  padding: 0 7.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.maker_wrap .diagnosis_result .label,
+.maker_wrap .diagnosis_tweet .label,
+.maker_wrap .diagnosis_finished .label {
+  font-size: 5.9vw;
+  padding-top: 10.7vw;
+}
+
+.maker_wrap .diagnosis_result .btn_wrap,
+.maker_wrap .diagnosis_tweet .btn_wrap,
+.maker_wrap .diagnosis_finished .btn_wrap {
+  padding: 6.4vw 6.1vw;
+}
+
+.maker_wrap .diagnosis_result .btn_wrap .btn_gray,
+.maker_wrap .diagnosis_tweet .btn_wrap .btn_gray,
+.maker_wrap .diagnosis_finished .btn_wrap .btn_gray {
+  margin-top: 3.2vw;
+}
+
+.maker_wrap .diagnosis_result .description {
+  font-size: 3.7vw;
+  padding-top: 8vw;
+}
+
+.maker_wrap .diagnosis_result .flex_wrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.maker_wrap .diagnosis_result .flex_wrap .result_text {
+  font-size: 5.3vw;
+}
+
+.maker_wrap .diagnosis_tweet .notice {
+  color: #666;
+  font-size: 2.7vw;
+  padding-top: 5.3vw;
+  text-align: left;
+}
+
+.maker_wrap .diagnosis_tweet .tweet_body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.maker_wrap .diagnosis_tweet .tweet_body > textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.4;
+  padding: 8px 16px;
+  height: auto;
+  vertical-align: bottom;
+  resize: none;
+}
+
+.maker_wrap .diagnosis_tweet .tweet_body > textarea::-webkit-search-decoration {
+  display: none;
+}
+
+.maker_wrap .diagnosis_tweet .tweet_body > textarea::focus {
+  outline-offset: -2px;
+}
+
+.maker_wrap .diagnosis_tweet .tweet_body .count {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #666;
+  padding-top: 1.1vw;
+}
+
+.maker_wrap .diagnosis_tweet .btn_wrap {
+  margin-top: 3.2vw;
+}
+
+.maker_wrap .diagnosis_tweet .loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 27px;
+}
+
+.maker_wrap .diagnosis_finished .body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: grid;
+  place-items: center;
+}
+
+.maker_wrap .diagnosis_finished .body > p {
+  font-size: 5.3vw;
+}
+
+.maker_wrap .diagnosis_finished .btn {
+  padding: 0 6.1vw 6.4vw;
+}
