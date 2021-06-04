@@ -1,6 +1,6 @@
 'use strict';
 
-export default text2 = [
+const text2 = [
 "空を飛ぶ",
 "成功する",
 "光り輝く",
@@ -82,3 +82,4 @@ export default text2 = [
 "ほんの小さな幸せで満足できる",
 "心優しいモンスターと友達になる"
 ]
+export default text2

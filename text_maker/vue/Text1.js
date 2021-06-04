@@ -1,6 +1,6 @@
 'use strict';
 
-export default text1 = [
+const text1 = [
 "教会",
 "神社",
 "宇宙",
@@ -82,3 +82,4 @@ export default text1 = [
 "夜景の見えるレストラン",
 "ホテルのスイートルーム"
 ]
+export default text1
