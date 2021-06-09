@@ -4,7 +4,7 @@ import {cardApp} from './CardApp.js'
 import matchApp from './MatchApp.js'
 
 new Vue({
-  el: "#typeCardUiApp",
+  el: "#cardUiApp",
   data: {
     hasCard: true,
     isSmallIndicate: false,
@@ -41,11 +41,9 @@ new Vue({
     setIndicatedArea() {
       const maxArea = 588
       const winH = window.innerHeight
-      const header = document.querySelector(".type-cardui_header")
-      const headerH = header ? header.getBoundingClientRect().height : 0
-      const bottomnav = document.querySelector("#bottom_navigation")
-      const bottomnavH = bottomnav ? bottomnav.getBoundingClientRect().height : 0
-      const indicatedArea = winH - headerH - bottomnavH
+      const header = document.querySelector("header")
+      const headerH = header.getBoundingClientRect().height
+      const indicatedArea = winH - headerH
       if (indicatedArea >= maxArea) {
         this.$set(this.indicate.container, 'height', `${maxArea}px`)
         this.$set(this.indicate.card, 'height', '452px')
