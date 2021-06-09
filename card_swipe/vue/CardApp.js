@@ -26,7 +26,9 @@ const cardModule = Vue.extend({
     cardClass() {
       return {
         moving: this.moving,
-        pointer_events_none: this.processing
+        pointer_events_none: this.processing,
+        is_type: this.state === 1,
+        is_skip: this.state === 2,
       }
     }
   },
@@ -35,6 +37,7 @@ const cardModule = Vue.extend({
       this.deltaX = 0
       this.deltaY = 0
       this.rotate = 0
+      this.state = 0
     },
     setSwipe() {
       this.initSwipe()
@@ -83,6 +86,7 @@ const cardModule = Vue.extend({
       const moveOutWidth = document.body.clientWidth * 1.5;
       this.deltaY = 0
       this.rotate = 0
+      this.state = state
       if (type) {
         this.deltaX = moveOutWidth
         this.$emit('on-action',state)
